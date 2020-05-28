@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--21609 Mark Christian ALbinto-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listPlacesPage">
+
+    <!--Title-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="399dp"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:text="JSON List"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--Btn List Stations-->
+    <Button
+        android:id="@+id/listStations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="10dp"
+        android:text="List All Stations" />
+
+    <!--Scroll-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listStations"
+        android:layout_above="@+id/listNav"
+        >
+
+        <!--Station Data-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/apiData"
+        android:padding="5dp"
+        android:textSize="24sp"
+        android:hint="............."
+        />
+
+    </ScrollView>
+
+
+    <!--Nav Bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/listNav"
+        >
+
+        <!--Btn Home-->
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="switchToHomePage"
+            android:text="Home"
+            tools:text="Home" />
+
+        <!--Btn Page List-->
+        <Button
+            android:id="@+id/listPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="switchToListPage"
+            android:text="List Page"
+            tools:text="List Page" />
+
+        <!--Btn Recycler-->
+        <Button
+            android:id="@+id/recyclerListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="switchToListRecyclePage"
+            android:text="Recycler List"
+            tools:text="Recycler List" />
+
+        <!--Btn Maps-->
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="switchToMapPage"
+            android:text="Map"
+            tools:text="Map" />
+    </LinearLayout>
+</RelativeLayout>
